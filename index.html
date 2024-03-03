@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGO</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <script src="cena_0.js"></script>
+    <script src="cena_1.js"></script>
+    <script src="cena_2.js"></script>
+    <script src="cena_3.js"></script>
+    <script src="cena_4.js"></script>
+    <script src="cena_5.js"></script>
+    <style> body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; } </style>
+    <link rel="shortcut icon" href="assets/pacman_titulo.png" type="image/x-icon">
+</head>
+
+<body>
+    <script>
+
+    const phaserConfig = {
+        type: Phaser.AUTO,
+        parent: "game",
+        width: 1252,
+        height: 834,
+        physics: {
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 350 },
+                debug: false
+            }
+        },
+        scene: [ SceneZero, SceneOne, SceneTwo, SceneThree, SceneFour, SceneFive]
+    };
+    
+    const game = new Phaser.Game(phaserConfig)
+
+    var pacMan;
+    var vida = 3;
+    var moeda;
+    var pontuacao = 0;
+    var placar;
+    var rp;
+    var gp;
+
+    </script>
+</body>
+</html>
